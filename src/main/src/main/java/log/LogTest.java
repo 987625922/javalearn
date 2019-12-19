@@ -1,10 +1,12 @@
 package log;
 
-import org.apache.log4j.Logger;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class LogTest {
-    private static Logger logger = Logger.getLogger(LogTest.class);
 
+    private final static Logger logger = LoggerFactory.getLogger(LogTest.class);
 
     public static void main(String[] args) throws InterruptedException {
         logger.trace("跟踪信息");
