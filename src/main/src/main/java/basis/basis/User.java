@@ -1,4 +1,4 @@
-package basis;
+package basis.basis;
 
 /**
  * 接口内实体方法
