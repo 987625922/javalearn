@@ -2,7 +2,7 @@ package annotation;
 
 import java.lang.reflect.Method;
 /*
-* java反射的使用
+* java反射
 *
 * 通过反射获取到ben，通过反射获取到bean上注解的参数的值
 *

@@ -1,4 +1,4 @@
-package clone;
+package basis.clone;
 
 import lombok.Data;
 
@@ -68,10 +68,10 @@ public class ShallowClone implements Cloneable {
         shallowClone.setName("newName");
         shallowClone.setAge(20);
         shallowClone.getBooks().add("javascript");
-        System.out.println("source: " + shallowClone.toString() + "\nclone:" + cloneObj.toString());
+        System.out.println("source: " + shallowClone.toString() + "\nbasis.clone:" + cloneObj.toString());
 
         shallowClone.setBooks(Arrays.asList("hello"));
-        System.out.println("source: " + shallowClone.toString() + "\nclone:" + cloneObj.toString());
+        System.out.println("source: " + shallowClone.toString() + "\nbasis.clone:" + cloneObj.toString());
     }
 
 }

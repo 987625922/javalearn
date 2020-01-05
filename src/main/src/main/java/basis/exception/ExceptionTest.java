@@ -1,4 +1,4 @@
-package exception;
+package basis.exception;
 
 public class ExceptionTest {
 

@@ -1,4 +1,4 @@
-package lambda;
+package basis.lambda;
 
 import bean.Book;
 import java.util.Arrays;
