@@ -38,9 +38,13 @@ public class JdbcTest {
             insertStmt = con.createStatement();
             insertStmt.execute(sql1);
 
+            // 关闭自动提交
+            con.setAutoCommit(false);
             insertPs = con.prepareStatement(sql2, Statement.RETURN_GENERATED_KEYS);
             insertPs.setString(1, "用户名");
             insertPs.execute();
+            // 手动提交事务
+            con.commit();
             // 在执行完插入语句后，MySQL会为新插入的数据分配一个自增长id
             // JDBC通过getGeneratedKeys获取该id
             ResultSet rs = insertPs.getGeneratedKeys();
