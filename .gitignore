@@ -34,5 +34,4 @@ gen
 .gitignore
 .idea/
 javalearn.iml
-src/main/src/main/java/jdbc/
 target/generated-sources/
