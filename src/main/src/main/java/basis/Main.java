@@ -1,5 +1,7 @@
 package basis;
 
+import java.util.Optional;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -21,5 +23,17 @@ public class Main {
             sb.append(str);
         }
         System.out.println("可变参数使用：" + sb.toString());
+    }
+
+    /**
+     * Optional判空
+     */
+    public static void optionalUse(){
+        Optional<User> user = null;
+        if (user.isPresent()){
+
+        }else {
+
+        }
     }
 }
