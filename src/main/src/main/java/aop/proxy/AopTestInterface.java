@@ -1,6 +1,6 @@
 package aop.proxy;
 
-public interface Person {
+public interface AopTestInterface {
 
     void dance(String str);
 

@@ -9,8 +9,8 @@ public class ProxyTest {
 
     public static void main(String args[]) {
         XiaoMingProxy xp = new XiaoMingProxy();
-        Person person = xp.getProxy();
-        person.sing("哈哈哈");
+        AopTestInterface person = xp.getProxy();
+        person.sing("在ProxyTest中调用此方法");
 
     }
 

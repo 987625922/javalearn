@@ -1,8 +1,8 @@
 package aop.bean;
 
-import aop.proxy.Person;
+import aop.proxy.AopTestInterface;
 
-public class XiaoMing implements Person {
+public class AopTestBean implements AopTestInterface {
     @Override
     public void dance(String str) {
         System.out.println(str);
@@ -10,6 +10,6 @@ public class XiaoMing implements Person {
 
     @Override
     public void sing(String str) {
-        System.out.println("唱-》" + str);
+        System.out.println("AopTestBean的本体方法：" + str);
     }
 }

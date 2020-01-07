@@ -1,26 +1,29 @@
 package aop.proxy;
 
-import aop.bean.XiaoMing;
+import aop.bean.AopTestBean;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 public class XiaoMingProxy {
-    XiaoMing xiaoMing = new XiaoMing();
+    AopTestBean xiaoMing = new AopTestBean();
 
     //反射bean
-    public Person getProxy() {
-        return (Person) Proxy.newProxyInstance(XiaoMingProxy.class.getClassLoader(),
+    public AopTestInterface getProxy() {
+        return (AopTestInterface) Proxy.newProxyInstance(XiaoMingProxy.class.getClassLoader(),
                 xiaoMing.getClass().getInterfaces(), new InvocationHandler() {
                     @Override
                     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
                         if (method.getName().equals("sing")) {
 
-                            System.out.println("给1000万来再唱");
+                            System.out.println("通过反射模拟aop的before");
 
                             //实际上唱歌的还是小明
                             method.invoke(xiaoMing, args);
+
+                            System.out.println("通过反射模拟aop的after");
+
                         }
                         return null;
                     }
