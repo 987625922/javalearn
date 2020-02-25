@@ -7,13 +7,20 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * 浅拷贝的实现（实现Cloneable接口）
+ *
+ * 深拷贝和浅拷贝是只针对Object和Array这样的引用数据类型的。
+ * 浅拷贝只复制指向某个对象的指针，而不复制对象本身，新旧对象还是共享同一块内存。
+ * 但深拷贝会另外创造一个一模一样的对象，新对象跟原对象不共享内存，修改新对象不会改到原对象。
+ *
  * <p>
+ * 浅拷贝的实现（实现Cloneable接口）
  * 拷贝后获取的是一个独立的对象，和原对象拥有不同的内存地址
  * 基本元素类型，两者是隔离的（虽然上面只给出了int，String）
  * 基本元素类型包括:
- * int, Integer, long, Long, char, Charset, byte,Byte, boolean, Boolean, float,Float, double, Double, String
+ * int, Integer, long, Long, char, Charset, byte,Byte, boolean, Boolean,
+ * float,Float, double, Double, String
  * 非基本数据类型（如基本容器，其他对象等），只是拷贝了一份引用出去了，实际指向的依然是同一份
+ *
  * <p>
  * 深拷贝（下面的deepClone方法），在浅拷贝的基础上，把类也new一个新的
  */
