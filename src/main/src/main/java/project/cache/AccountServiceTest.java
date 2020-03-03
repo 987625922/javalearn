@@ -18,7 +18,6 @@ public class AccountServiceTest {
 
         accountService.getAccountByName("accountName");
         accountService.getAccountByName("accountName");
-
     }
 
 }
