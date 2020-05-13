@@ -1,5 +1,9 @@
 package basis.tree;
 
+/**
+ * 平衡二叉树
+ * @param <T>
+ */
 public class AVLTree<T extends Comparable<T>> {
     /**
      * 根节点

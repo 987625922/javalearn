@@ -1,7 +1,7 @@
 package basis.tree;
 
 /**
- * 二叉树的实现
+ * 二叉搜索树的实现
  */
 public class BinaryTree<T extends Comparable<T>> {
 
