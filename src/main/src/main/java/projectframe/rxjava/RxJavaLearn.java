@@ -115,11 +115,11 @@ public class RxJavaLearn {
             observableEmitter.onNext(2);
             observableEmitter.onComplete();
         }).map(new Function<Integer, String>() {
-            @Override
-            public String apply(Integer integer) throws Exception {
-                return "map处理之后的:" + integer;
-            }
-        }).subscribe(new Consumer<String>() {
+                    @Override
+                    public String apply(Integer integer) throws Exception {
+                        return "map处理之后的:" + integer;
+                    }
+                }).subscribe(new Consumer<String>() {
             @Override
             public void accept(String integer) throws Exception {
                 System.out.println("Consumer:  " + integer);
@@ -259,12 +259,13 @@ public class RxJavaLearn {
          * 间隔时间执行某个操作
          * 3个参数，第一个发送延迟，第二个间隔时间，第三个是时间单位
          */
-        Observable.interval(3, 2, TimeUnit.SECONDS).subscribe(new Consumer<Long>() {
-            @Override
-            public void accept(Long aLong) throws Exception {
-                System.out.println("循环发送消息：" + aLong);
-            }
-        });
+        Observable.interval(3, 2, TimeUnit.SECONDS)
+                .subscribe(new Consumer<Long>() {
+                    @Override
+                    public void accept(Long aLong) throws Exception {
+                        System.out.println("循环发送消息：" + aLong);
+                    }
+                });
     }
 
     /**
@@ -287,7 +288,6 @@ public class RxJavaLearn {
             System.out.println("观察者运行");
         });
     }
-
 
 
 }

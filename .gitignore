@@ -34,4 +34,4 @@ gen
 .gitignore
 .idea/
 javalearn.iml
-target/generated-sources/
+target/
