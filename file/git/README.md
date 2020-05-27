@@ -89,10 +89,14 @@ git reset HEAD 文件名/.
 - **撤销提交（commit）**
 
   ```
-  #撤销上一次的提交
-  git reset --commit id
+  #撤销上一次的提交（ 
+  # --soft 仅仅移动当前Head指针，不会改变工作区和暂存区的内容
+  #--mixed 是reset的默认参数,移动head指针，改变暂存区内容，但不会改变工作区
+  #--hard 当前head指针、工作区和暂存区内容全部改变
+  ）
+  git reset --hard commitId
   
-  #这条命令会把指定的提交的所有修改回滚，并同时生成一个新的提交。
+  #撤销某个commit的提交，这个commit可以是第一，二，三个
   git revert <commit-id>
   ```
 
