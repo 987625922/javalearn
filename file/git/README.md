@@ -48,9 +48,6 @@ git reset HEAD 文件名/.
   
   #此命令可以用来回退到任意版本
   git reset --hard commitid ** 
-  
-  #可以撤销add的提交
-  git reset HEAD 文件名/. 
   ```
 
 - 取消已缓存的内容（多个文件加入缓存区之后，可以通过命令取消其中一个文件）
@@ -72,8 +69,11 @@ git reset HEAD 文件名/.
   #git checkout命令会用最近提交的版本覆盖掉它
   git checkout (文件名加后缀/.)
   
-  # 此命令可以用来回退到任意版本
+  #此命令可以用来回退到任意版本
    reset --hard commitid **
+   
+  #可以撤销add的提交
+  git reset HEAD 文件名/. 
   ```
 
 - **<a id="忽略文件">忽略文件</a>**
@@ -92,8 +92,8 @@ git reset HEAD 文件名/.
   #撤销上一次的提交
   git reset --commit id
   
+  #这条命令会把指定的提交的所有修改回滚，并同时生成一个新的提交。
   git revert <commit-id>
-  这条命令会把指定的提交的所有修改回滚，并同时生成一个新的提交。
   ```
 
 - 日志与历史
