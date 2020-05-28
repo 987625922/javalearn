@@ -1,7 +1,15 @@
 package basis.basis;
 
+import basis.basis.assist.User;
+
 import java.util.Optional;
 
+/**
+ * java基础的使用
+ * 1.接口内实现方法
+ * 2.可变参数String...
+ * 3.Optional判空
+ */
 public class Main {
 
     public static void main(String[] args) {

@@ -9,7 +9,7 @@
     <!--    servlet原始的使用-->
     <servlet>
         <servlet-name>MyServlet</servlet-name>
-        <servlet-class>servlet.HttpServlet</servlet-class>
+        <servlet-class>http.servlet.HttpServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>MyServlet</servlet-name>
@@ -22,7 +22,7 @@
 
     <servlet>
         <servlet-name>getShare</servlet-name>
-        <servlet-class>servlet.GetShareRequser</servlet-class>
+        <servlet-class>http.servlet.GetShareRequser</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>getShare</servlet-name>
@@ -30,14 +30,14 @@
     </servlet-mapping>
     <filter>
         <filter-name>myFilter</filter-name>
-        <filter-class>servlet.MyFilter</filter-class>
+        <filter-class>http.servlet.MyFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>myFilter</filter-name>
         <url-pattern>/admin/*</url-pattern>
     </filter-mapping>
     <listener>
-        <listener-class>servlet.MyListener</listener-class>
+        <listener-class>http.servlet.MyListener</listener-class>
     </listener>
     <!--    servlet原始的使用 end-->
 </web-app>
