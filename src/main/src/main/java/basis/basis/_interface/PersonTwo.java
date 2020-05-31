@@ -1,4 +1,4 @@
-package basis.basis.assist;
+package basis.basis._interface;
 
 public interface PersonTwo {
     default void getName() {

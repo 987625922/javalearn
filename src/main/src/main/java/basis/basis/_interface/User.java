@@ -1,4 +1,4 @@
-package basis.basis.assist;
+package basis.basis._interface;
 
 /**
  * 接口内实体方法

@@ -1,6 +1,6 @@
 package basis.basis;
 
-import basis.basis.assist.User;
+import basis.basis._interface.User;
 
 import java.util.Optional;
 
