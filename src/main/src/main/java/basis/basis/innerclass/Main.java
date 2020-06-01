@@ -11,7 +11,21 @@ public class Main {
          * 创建一个内部类
          */
         OuterClass.InnerClass innerClass1 = outerClass.new InnerClass();
-
+        /**
+         * prvate 的内部类 只能在类中实现
+         */
 //        OuterClass.PInnerClass innerClass2 = outerClass.new PInnerClass();
+        /**
+         * 静态内部类
+         */
+        OuterClass.SInnerClass innerClass2 = new OuterClass.SInnerClass();
+        /**
+         * 这就是匿名内部类
+         */
+        new Thread(){
+            @Override
+            public void run() {
+            }
+        }.start();
     }
 }
