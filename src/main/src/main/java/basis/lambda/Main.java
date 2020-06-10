@@ -1,6 +1,6 @@
 package basis.lambda;
 
-import bean.Book;
+import common.bean.Book;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
