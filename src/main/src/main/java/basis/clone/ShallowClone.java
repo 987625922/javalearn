@@ -1,6 +1,7 @@
 package basis.clone;
 
 import lombok.Data;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -54,8 +55,8 @@ public class ShallowClone implements Cloneable {
         return clone;
     }
 
-
-    public static void main(String[] args) {
+    @Test
+    public void test() {
         ShallowClone shallowClone = new ShallowClone();
         shallowClone.setName("SourceName");
         shallowClone.setAge(28);

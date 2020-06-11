@@ -1,4 +1,4 @@
-package basis.basis._interface;
+package basis.interfacelearn;
 
 public interface Person {
     void getName();

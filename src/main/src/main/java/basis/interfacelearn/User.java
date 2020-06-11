@@ -1,4 +1,4 @@
-package basis.basis._interface;
+package basis.interfacelearn;
 
 /**
  * 接口内实体方法

@@ -1,6 +1,6 @@
 package basis.basis;
 
-import basis.basis._interface.User;
+import basis.interfacelearn.User;
 
 import java.util.Optional;
 
