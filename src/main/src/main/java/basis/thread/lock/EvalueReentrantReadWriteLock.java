@@ -1,12 +1,15 @@
-package basis.thread.lock.ReentrantLock;
+package basis.thread.lock;
 
 import java.util.Random;
 import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
+/**
+ * ReadWriteLock 读写分离锁
+ * 写会阻塞，读不会阻塞
+ * 如果读比写多就使用这个锁
+ */
 public class EvalueReentrantReadWriteLock {
-    private static Lock lock = new ReentrantLock();
     private static ReentrantReadWriteLock readWriteLock
             = new ReentrantReadWriteLock();
     private static Lock readLock = readWriteLock.readLock();
@@ -36,33 +39,27 @@ public class EvalueReentrantReadWriteLock {
 
     public static void main(String[] args) {
         EvalueReentrantReadWriteLock demo = new EvalueReentrantReadWriteLock();
-        Runnable readRunnable = new Runnable() {
-            @Override
-            public void run() {
-                try {
-//                    demo.handleRead(lock);
-                    demo.handleRead(readLock);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+        Runnable readRunnable = () -> {
+            try {
+                demo.handleRead(readLock);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         };
 
-        Runnable writeRunnable = new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    demo.handleWrite(writeLock,new Random().nextInt());
-//                    demo.handleWrite(lock,new Random().nextInt());
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+        Runnable writeRunnable = () -> {
+            try {
+                demo.handleWrite(writeLock, new Random().nextInt());
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         };
-        for (int i = 0; i < 18 ; i++) {
+        //开启读线程
+        for (int i = 0; i < 18; i++) {
             new Thread(readRunnable).start();
         }
-        for (int i = 0; i < 20; i++) {
+        //开启写线程
+        for (int i = 18; i < 20; i++) {
             new Thread(writeRunnable).start();
         }
     }

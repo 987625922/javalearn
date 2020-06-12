@@ -1,4 +1,4 @@
-package basis.thread.lock.ReentrantLock;
+package basis.thread.lock;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

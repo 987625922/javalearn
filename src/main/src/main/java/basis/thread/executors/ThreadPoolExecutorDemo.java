@@ -8,9 +8,8 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * JAVA 线程池的使用
- *
  */
-public class Main {
+public class ThreadPoolExecutorDemo {
     public static void main(String[] args) {
 //        cachedThreadPool();
 //        fixedThreadPool();
@@ -19,7 +18,8 @@ public class Main {
 
     }
 
-    // 创建一个可缓存线程池，如果线程池长度超过处理需要，可灵活回收空闲线程，若无可回收，则新建线程。
+    // 创建一个可缓存线程池，线程池线程数量是不确定的，数量会根据实际情况调整，
+    // 如果有空闲的线程就复用，如果没有就会创建一个新的线程
     public static void cachedThreadPool() {
         ExecutorService cachedThreadPool = Executors.newCachedThreadPool();
         for (int i = 0; i < 10; i++) {
@@ -61,8 +61,11 @@ public class Main {
     }
 
     //newScheduledThreadPool： 创建一个定长线程池，支持定时及周期性任务执行。
+    //ScheduledExecutorService 在 ExecutorSerivce 基础上扩展了给定时间
+    //延时或周期性执行某个任务
     public static void scheduledThreadPool() {
-        ScheduledExecutorService scheduledThreadPool = Executors.newScheduledThreadPool(5);
+        ScheduledExecutorService scheduledThreadPool
+                = Executors.newScheduledThreadPool(5);
         scheduledThreadPool.schedule(new Runnable() {
             @Override
             public void run() {
@@ -71,7 +74,8 @@ public class Main {
         }, 3, TimeUnit.SECONDS);
     }
 
-    // 创建一个单线程化的线程池，它只会用唯一的工作线程来执行任务，保证所有任务按照指定顺序(FIFO, LIFO, 优先级)执行。
+    // 创建一个单线程化的线程池，
+    // 保证所有任务按照先进先出执行。
     public static void singleThreadExecutor() {
         ExecutorService singleThreadExecutor = Executors.newSingleThreadExecutor();
         for (int i = 0; i < 10; i++) {
