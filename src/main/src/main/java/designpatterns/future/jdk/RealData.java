@@ -1,12 +1,19 @@
-package designpatterns.future;
+package designpatterns.future.jdk;
+
+import java.util.concurrent.Callable;
 
 /**
- * 真实数据
+ * 获取真实数据的
  */
-public class RealData implements Data {
-    protected final String result;
+public class RealData implements Callable<String> {
+    private String para;
+
+    public RealData(String para) {
+        this.para = para;
+    }
     //模拟长时间获取的真实数据
-    public RealData(String para){
+    @Override
+    public String call() throws Exception {
         StringBuffer sb = new StringBuffer();
         for (int i = 0; i < 10; i++) {
             sb.append(para);
@@ -16,11 +23,6 @@ public class RealData implements Data {
                 e.printStackTrace();
             }
         }
-        result = sb.toString();
-    }
-    //返回真实数据
-    @Override
-    public String getResult() {
-        return result;
+         return sb.toString();
     }
 }
