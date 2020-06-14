@@ -5,6 +5,7 @@ import common.bean.User;
 import java.util.Optional;
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 public class Simple {
@@ -38,6 +39,7 @@ public class Simple {
                 return new RuntimeException();
             }
         });
+        //转换值
         //转换Optional<User>为Optional<Object>
         Optional<String> mapUser = optionalUser.map(new Function<User, String>() {
             @Override
@@ -46,13 +48,22 @@ public class Simple {
                 return "把user转换成String";
             }
         });
-        //研究
-//        Optional<String>  = optionalUser.flatMap(new Function<User, Optional<? extends Object>>() {
-//            @Override
-//            public Optional<? extends Object> apply(User user) {
-//                return Optional.empty();
-//            }
-//        })
+        //       和map不同的是，apply返回的是Optional，而不是对象
+        Optional<String> flatMapUser =optionalUser.flatMap(new Function<User, Optional<String>>() {
+            @Override
+            public Optional<String> apply(User user) {
+                return Optional.of("返回的是Optional<String>而不像上面的String");
+            }
+        });
+        //过滤器filter
+        //如果test的返回值是true就返回Optional，如果是false就返回空的Optional
+        optionalUser.filter(new Predicate<User>() {
+            @Override
+            public boolean test(User user) {
+                return user.getUserName().equals("用户名如果相等就返回这个Optional");
+            }
+        });
+
 
     }
 
