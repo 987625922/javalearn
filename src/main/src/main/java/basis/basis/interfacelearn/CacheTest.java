@@ -1,4 +1,4 @@
-package basis.interfacelearn;
+package basis.basis.interfacelearn;
 
 import org.junit.Test;
 

@@ -10,9 +10,8 @@ public class EvalueObject extends Object {
      * 返回这个对象的hashcode
      * 通过hash算法得到的hash值就在hash表中
      * <p>
-     * HashCode的存在主要是为了查找的快捷性，
-     * HashCode是用来在散列存储结构中确定对象的存储地址的
-     * (后半句说的用hashcode来代表对象就是在hash表中的位置)
+     *  把所有的Object放在一个数组中，根据hashCode能
+     *  快速定位到这个Object在数组中的位置
      *
      * @return
      */

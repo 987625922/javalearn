@@ -1,4 +1,4 @@
-package basis.interfacelearn;
+package basis.basis.interfacelearn;
 
 @FunctionalInterface
 public interface CacheSelector<T> {

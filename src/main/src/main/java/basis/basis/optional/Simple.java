@@ -1,4 +1,4 @@
-package basis.optional;
+package basis.basis.optional;
 
 import common.bean.User;
 
@@ -40,7 +40,7 @@ public class Simple {
             }
         });
         //转换值
-        //转换Optional<User>为Optional<Object>
+        //转换Optional<User1>为Optional<Object>
         Optional<String> mapUser = optionalUser.map(new Function<User, String>() {
             @Override
             public String apply(User user) {

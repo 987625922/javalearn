@@ -1,9 +1,9 @@
-package basis.interfacelearn;
+package basis.basis.interfacelearn;
 
 /**
  * 接口内实体方法
  */
-public class User implements Person, PersonTwo {
+public class User1 implements Person, PersonTwo {
 
     @Override
     public void getName() {
