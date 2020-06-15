@@ -3,8 +3,10 @@ package basis.io;
 import java.io.*;
 
 /**
- * BufferedInputStream & BufferedOutputStream 为另一个输入输出流流添加一些功能，即缓冲区的作用。
- * 在创建 BufferedInputStream & BufferedOutputStream 时，会创建一个内部缓冲区数组。
+ * BufferedInputStream & BufferedOutputStream
+ * 为另一个输入输出流流添加一些功能，即缓冲区的作用。
+ * 在创建 BufferedInputStream & BufferedOutputStream 时，
+ * 会创建一个内部缓冲区数组。
  */
 public class BufferedInputStreamOrBufferedOutputStream {
 
