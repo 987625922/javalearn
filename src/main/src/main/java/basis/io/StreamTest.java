@@ -16,33 +16,41 @@ import java.io.IOException;
  * 1字节=8位(1 byte = 8bit)(0 - 255)
  * 1字=2字节(1 word = 2 byte)
  * 1 KB = 1024 Bytebyte
+ * <p></p>
+ * UTF-8对数字和字母就使用一个字节，而对汉字就使用3个字节
+ * 写在.java源代码中的中文字符采用的编码方式是UNICODE
  */
 public class StreamTest {
 
     @Test
     public void test() throws IOException {
         outPutStreamTest();
-        inputStreamTest();
+//        inputStreamTest();
     }
 
     //已字节流读取文件
-    private void inputStreamTest() throws IOException {
+    private void inputStreamTest() {
         File file = new File("d://log.txt");
-        FileInputStream fis = new FileInputStream(file);
-        byte[] all = new byte[(int) file.length()];
-        fis.read(all);
-        for (byte b : all) {
-            System.out.println(b);
+        try (FileInputStream fis = new FileInputStream(file)) {
+            byte[] all = new byte[(int) file.length()];
+            fis.read(all);
+            for (byte b : all) {
+                System.out.println(b);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        fis.close();
     }
 
-    private void outPutStreamTest() throws IOException {
+    private void outPutStreamTest() {
         File file = new File("d://log.txt");
-        byte data[] = {88, 89};
-        FileOutputStream fos = new FileOutputStream(file);
-        fos.write(data);
-        fos.close();
+        String str = "中文的汉字！";
+        byte data[] = str.getBytes();
+        try (FileOutputStream fos = new FileOutputStream(file)) {
+            fos.write(data);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

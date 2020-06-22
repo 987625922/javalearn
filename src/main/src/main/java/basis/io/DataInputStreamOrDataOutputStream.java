@@ -4,13 +4,9 @@ import java.io.*;
 
 /**
  * DataInputStream & DataOutputStream，是处理流，
- * 改构造方法接收一个已存在的输入输出流， 允许程序从读取方便快捷 操作java的基本数据类型。
+ * 允许程序从读取和操作java的基本数据类型。
  */
 public class DataInputStreamOrDataOutputStream {
-
-    public static void main(String[] args) {
-
-    }
 
     // 向文件中写入 java基本数据类型
     private static void write(String dest) throws IOException {

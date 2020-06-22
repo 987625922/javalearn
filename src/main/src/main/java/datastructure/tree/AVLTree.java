@@ -28,9 +28,9 @@ public class AVLTree<T extends Comparable<T>> {
      * @param p 最小旋转子树的根节点
      *          向左旋转之后p移到p的左子树处，p的右子树B变为此最小子树根节点，
      *          B的左子树变为p的右子树
-     *          比如：     A(-2)                   B(1)
+     *          比如：     A(-2)                   BuilderModel(1)
      *          \        左旋转       /   \
-     *          B(0)     ---->       A(0)   \
+     *          BuilderModel(0)     ---->       A(0)   \
      *          /   \                   \    \
      *          BL(0)  BR(0)              BL(0) BR(0)
      *          旋转之后树的深度之差不超过1
@@ -85,9 +85,9 @@ public class AVLTree<T extends Comparable<T>> {
      * @param p 最小旋转子树的根节点
      *          向右旋转之后，p移到p的右子节点处，p的左子树B变为最小旋转子树的根节点
      *          B的右子节点变为p的左节点、
-     *          例如:       A(2)                     B(-1)
+     *          例如:       A(2)                     BuilderModel(-1)
      *          /         右旋转          /    \
-     *          B(0)       ------>         /     A(0)
+     *          BuilderModel(0)       ------>         /     A(0)
      *          /   \                      /      /
      *          BL(0) BR(0)                BL(0)  BR(0)
      */

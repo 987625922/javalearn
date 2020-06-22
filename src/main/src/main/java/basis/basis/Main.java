@@ -5,6 +5,7 @@ import common.bean.User;
 import org.junit.Test;
 
 import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -80,8 +81,8 @@ public class Main {
         Stream<String> stream = list.stream()
                 .sorted(String::compareTo)
                 .filter(str -> str.equals("11"))
-                .map(String::toUpperCase);
-
+                .map(String::toUpperCase);//转成大写
+//      List list = stream.collect(Collectors.toList());
         stream.forEach(System.out::println);
 
         //Match匹配  判断的条件里，任意一个元素成功，返回true

@@ -10,10 +10,6 @@ import java.io.*;
  */
 public class BufferedInputStreamOrBufferedOutputStream {
 
-    public static void main(String[] args) {
-
-    }
-
     // 为文件字节流 添加缓冲区功能， 一次读写一个字节数据，但内部缓冲区数组已经填满
     private static void copyFile1(String src, String dest) throws IOException {
         //1. 创建流
