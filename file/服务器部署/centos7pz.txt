@@ -34,6 +34,9 @@ ECS上搭建Docker（CentOS7）https://help.aliyun.com/document_detail/51853.htm
 
 			进入容器： docker exec -it name bash
 
+			从容器复制文件: docker container cp -a 34ab0e:/usr/local/tomcat/info.geling-log.log /home/ftp/ftpuser/
+
+
 ------------------- docker 1.vsftpd 2.rabbitmq 3.mysql 4.redis 5.nginx 6.tomcat
 1.docker pull fauria/vsftpd
 docker run -d -v /home/ftp:/home/vsftpd -p 20:20 -p 21:21 -p 21100-21110:21100-21110 -e FTP_USER=ftpuser -e FTP_PASS=LONGJINFEI -e PASV_ADDRESS=你的外网ip -e PASV_MIN_PORT=21100 -e PASV_MAX_PORT=21110 --name vsftpd --restart=always fauria/vsftpd
