@@ -1,4 +1,4 @@
-package datastructure.Builder;
+package designpatterns.builder;
 
 public class Test {
 

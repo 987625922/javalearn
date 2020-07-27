@@ -1,5 +1,10 @@
-package datastructure.Builder;
+package designpatterns.builder;
 
+/**
+ * 简单的建筑者模式
+ *
+ * @author LL
+ */
 public class BuilderModel {
     private String name;
     private int age;
