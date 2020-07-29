@@ -3,11 +3,12 @@ package basis.annotation.product;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-/*
-* 反射的实例
-*
-* 通过反射获取类上的值，再合成sql语句请求
-* */
+/**
+ * @author LL
+ * @Description:一个反射使用的小例子
+ * 反射的实例
+ * 通过反射获取类上的值，再合成sql语句请求
+ */
 public class Test {
 
     public static void main(String args[]) {

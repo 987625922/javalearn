@@ -1,5 +1,10 @@
 package basis.basis.innerclass;
 
+/**
+ * 匿名内部类使用的类
+ *
+ * @author LL
+ */
 public class Main {
     public static void main(String[] args) {
         OuterClass outerClass = new OuterClass();
@@ -22,7 +27,7 @@ public class Main {
         /**
          * 这就是匿名内部类
          */
-        new Thread(){
+        new Thread() {
             @Override
             public void run() {
             }

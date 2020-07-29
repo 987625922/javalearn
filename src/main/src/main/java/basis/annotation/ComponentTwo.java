@@ -7,6 +7,9 @@ import java.lang.annotation.Target;
 
 
 /**
+ * @Description:反射获取注解的学习(类级别)
+ */
+/**
  * 如果一个超类被 @Inherited 注解过的注解进行注解的话，
  * 那么如果它的子类没有被任何注解应用的话，那么这个子类就继承了超类的注解。
  */

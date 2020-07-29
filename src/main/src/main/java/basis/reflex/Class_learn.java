@@ -14,12 +14,13 @@ import java.lang.reflect.Method;
 /***
  * Class类的使用
  * Class类 代表类的实体，在运行的java应用程序中表示类和接口
- *
  * Class：类的Class对象定义 　
  * Constructor：代表类的构造器定义 　
  * Field：代表类的成员变量定义
  * Method：代表类的方法定义 　
  * Package：代表类的包定义
+ *
+ * @author LL
  */
 @Slf4j
 public class Class_learn {
@@ -88,8 +89,8 @@ public class Class_learn {
                     "Class,Constructor,Field,Method都有这个方法");
             log.info(String.valueOf(classTargetClass.isAnnotationPresent(Component.class)));
 
-            log.info("================= 构造方法相关");
 
+            log.info("================= 构造方法相关");
 
             log.info("===== getConstructor(Class...<?> parameterTypes) 通过构造器参数获取构造方法");
             Constructor constructor1 = classTargetClass.getConstructor(String.class);
@@ -135,7 +136,7 @@ public class Class_learn {
                 log.info(method.toString());
             }
             log.info("======== getDeclaredMethod() 通过方法名和参数获取方法");
-            Method method = classTargetClass.getDeclaredMethod("find",null);
+            Method method = classTargetClass.getDeclaredMethod("find", null);
             log.info(method.toString());
 
         } catch (ClassNotFoundException e) {
@@ -151,9 +152,5 @@ public class Class_learn {
         } catch (NoSuchFieldException e) {
             e.printStackTrace();
         }
-
-
     }
-
-
 }

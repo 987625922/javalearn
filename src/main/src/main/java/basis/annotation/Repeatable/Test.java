@@ -4,6 +4,9 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.lang.reflect.Method;
 
+/**
+ * 注解的学习类
+ */
 @Slf4j
 @Value(username = "11", phone = "1")
 @Value(username = "22", phone = "2")

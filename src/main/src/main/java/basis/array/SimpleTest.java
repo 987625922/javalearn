@@ -5,6 +5,11 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
+/**
+ * 数组的笔记类
+ *
+ * @author LL
+ */
 @Slf4j
 public class SimpleTest {
 
@@ -42,7 +47,7 @@ public class SimpleTest {
      */
     @Test
     public void equals() {
-        log.info(String.valueOf(Arrays.equals(a,a)));
+        log.info(String.valueOf(Arrays.equals(a, a)));
     }
 
 

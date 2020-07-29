@@ -1,11 +1,9 @@
 package basis.basis;
 
-import basis.basis.interfacelearn.User1;
 import common.bean.User;
 import org.junit.Test;
 
 import java.util.*;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -17,9 +15,6 @@ import java.util.stream.Stream;
 public class Main {
 
     public static void main(String[] args) {
-        //接口内实体方法的使用
-        User1 user = new User1();
-        user.getName();
         //可变参数的使用
         print("输出", "可变参数");
     }

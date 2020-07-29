@@ -1,5 +1,9 @@
 package basis.exception;
 
+/**
+ * 异常抛出的顺序
+ * @author LL
+ */
 public class ExceptionTest {
 
     public static void main(String args[]) {

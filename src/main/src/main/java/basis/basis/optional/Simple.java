@@ -8,6 +8,10 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
+/**
+ * @author LL
+ * @Description:Optional类的使用
+ */
 public class Simple {
 
     public static void main(String[] args) throws Throwable {
@@ -49,7 +53,7 @@ public class Simple {
             }
         });
         //       和map不同的是，apply返回的是Optional，而不是对象
-        Optional<String> flatMapUser =optionalUser.flatMap(new Function<User, Optional<String>>() {
+        Optional<String> flatMapUser = optionalUser.flatMap(new Function<User, Optional<String>>() {
             @Override
             public Optional<String> apply(User user) {
                 return Optional.of("返回的是Optional<String>而不像上面的String");

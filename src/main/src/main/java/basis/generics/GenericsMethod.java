@@ -4,6 +4,10 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * 泛型的使用
+ * @author LL
+ */
 public class GenericsMethod {
     /**
      * 泛型方法

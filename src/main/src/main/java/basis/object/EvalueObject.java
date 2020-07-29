@@ -1,5 +1,10 @@
 package basis.object;
 
+/**
+ * object类的解析学习
+ *
+ * @author LL
+ */
 public class EvalueObject extends Object {
     /**
      * 返回该对象的Class实例
@@ -10,8 +15,8 @@ public class EvalueObject extends Object {
      * 返回这个对象的hashcode
      * 通过hash算法得到的hash值就在hash表中
      * <p>
-     *  把所有的Object放在一个数组中，根据hashCode能
-     *  快速定位到这个Object在数组中的位置
+     * 把所有的Object放在一个数组中，根据hashCode能
+     * 快速定位到这个Object在数组中的位置
      *
      * @return
      */
@@ -40,6 +45,7 @@ public class EvalueObject extends Object {
     public Object clone() throws CloneNotSupportedException {
         return super.clone();
     }
+
     /**
      * 1. 锁池和等待池:
      *          锁池:假设线程A已经拥有了某个对象(注意:不是类)的锁，

@@ -4,6 +4,7 @@ package basis.basis.classcodeloadingorder;
  * 类的代码加载顺序
  * <p>
  * 执行顺序优先级：静态块>main()>构造块>构造方法
+ * @author LL
  */
 public class ClassCodeLoadingOrder {
 

@@ -4,11 +4,13 @@ package basis.basis.innerclass;
  * 内部类的使用
  * 内部类只有与外部类相关联的时候才能被创建，
  * 没有外部类前是不可能创建内部类对象的
- *
+ * <p>
  * 作用：
- *  1）可以通过外围类继承一个abstract类，内部类继承另一个abstract类的方式
- *  实现类的多重继承,内部类使得多继承的解决方案变得完整.
- *  2) 方便编写线程代码
+ * 1）可以通过外围类继承一个abstract类，内部类继承另一个abstract类的方式
+ * 实现类的多重继承,内部类使得多继承的解决方案变得完整.
+ * 2) 方便编写线程代码
+ *
+ * @author LL
  */
 public class OuterClass {
 
@@ -91,7 +93,7 @@ public class OuterClass {
     /**
      * 静态内部类
      */
-    static class SInnerClass{
+    static class SInnerClass {
 
     }
 }

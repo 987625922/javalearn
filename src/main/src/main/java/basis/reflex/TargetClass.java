@@ -3,6 +3,11 @@ package basis.reflex;
 import basis.annotation.Component;
 import basis.annotation.ComponentTwo;
 
+/**
+ * 被反射的目标类
+ *
+ * @author LL
+ */
 @ComponentTwo
 public class TargetClass implements ITargetClass {
 
@@ -10,7 +15,7 @@ public class TargetClass implements ITargetClass {
     int index = 101;
     String str = "11";
 
-    public TargetClass(){
+    public TargetClass() {
 
     }
 

@@ -6,7 +6,9 @@ import org.junit.Test;
 import java.lang.reflect.Field;
 
 /**
- * 代表类的成员变量
+ * 反射获取到的Field类的使用，代表类的成员变量
+ *
+ * @author LL
  */
 @Slf4j
 public class Field_learn {
@@ -19,7 +21,7 @@ public class Field_learn {
         log.info("返回这个变量的类型：" + field.getType().getName());
         log.info("返回指定bean上这个变量的值" + field.get(targetClassExamples));
         //设置指定bean上这个变量的值
-        field.set(targetClassExamples,111);
+        field.set(targetClassExamples, 111);
         log.info("返回指定bean上这个变量的值" + field.getInt(targetClassExamples));
     }
 }

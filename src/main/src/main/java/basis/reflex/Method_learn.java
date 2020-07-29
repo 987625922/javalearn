@@ -6,6 +6,11 @@ import org.junit.Test;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+/**
+ * 反射获取到的Method类的使用
+ *
+ * @author LL
+ */
 @Slf4j
 public class Method_learn {
 
