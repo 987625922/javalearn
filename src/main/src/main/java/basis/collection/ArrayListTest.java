@@ -1,5 +1,10 @@
 package basis.collection;
 
+import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @Author: 98762
  * @Date: 2020/7/30 22:05
@@ -8,5 +13,8 @@ package basis.collection;
  */
 public class ArrayListTest {
 
-
+    @Test
+    public void test() {
+        List list = new ArrayList();
+    }
 }

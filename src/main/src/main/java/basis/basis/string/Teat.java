@@ -11,9 +11,8 @@ import org.junit.Test;
 public class Teat {
     @Test
     public void test(){
-        String s = "123";
         String s1 = "h w";
-        final String s2 = "h ";
+        String s2 = "h ";
         String s3 = s2+"w";
         s3.hashCode();
         System.out.println(s1 == s3);

@@ -8,7 +8,6 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- *
  * 深拷贝和浅拷贝是只针对Object和Array这样的引用数据类型的。
  * 浅拷贝只复制指向某个对象的指针，而不复制对象本身，新旧对象还是共享同一块内存。
  * 但深拷贝会另外创造一个一模一样的对象，新对象跟原对象不共享内存，修改新对象不会改到原对象。
@@ -24,9 +23,13 @@ import java.util.List;
  *
  * <p>
  * 深拷贝（下面的deepClone方法），在浅拷贝的基础上，把类也new一个新的
+ *
+ * @author LL
+ * @Description:使用克隆(无论深浅)需要重写Object的clone方法 <p>
+ * <p>
  */
 @Data
-public class ShallowClone implements Cloneable {
+public class ShallowCloneTest implements Cloneable {
 
     private String name;
 
@@ -34,30 +37,33 @@ public class ShallowClone implements Cloneable {
 
     private List<String> books;
 
+    /**
+     * 重写Object类中的clone接口，实现浅拷贝
+     *
+     * @return
+     */
+//    @Override
+//    public ShallowCloneTest clone() throws CloneNotSupportedException {
+//        return (ShallowCloneTest) super.clone();
+//    }
 
-    public ShallowClone clone() {
-        ShallowClone clone = null;
-        try {
-            clone = (ShallowClone) super.clone();
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
-        }
-        return clone;
-    }
-
-    public ShallowClone deepClone() {
-        ShallowClone clone = new ShallowClone();
-        clone.name = this.name;
-        clone.age = this.age;
-        if (this.books != null) {
-            clone.books = new ArrayList<>(this.books);
-        }
+    /**
+     * 重写Object类中的clone接口，实现深拷贝
+     *
+     * @return
+     * @throws CloneNotSupportedException
+     */
+    @Override
+    public ShallowCloneTest clone() throws CloneNotSupportedException {
+        ShallowCloneTest clone = (ShallowCloneTest) super.clone();
+        clone.setBooks((List<String>) ((ArrayList) this.books).clone());
         return clone;
     }
 
     @Test
-    public void test() {
-        ShallowClone shallowClone = new ShallowClone();
+    public void test() throws CloneNotSupportedException {
+        //数据赋值
+        ShallowCloneTest shallowClone = new ShallowCloneTest();
         shallowClone.setName("SourceName");
         shallowClone.setAge(28);
         List<String> list = new ArrayList<>();
@@ -65,9 +71,8 @@ public class ShallowClone implements Cloneable {
         list.add("c++");
         shallowClone.setBooks(list);
 
-
-        ShallowClone cloneObj = shallowClone.clone();
-
+        //克隆
+        ShallowCloneTest cloneObj = shallowClone.clone();
 
         // 判断两个对象是否为同一个对象（即是否是新创建了一个实例）
         System.out.println(shallowClone == cloneObj);
