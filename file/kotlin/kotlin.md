@@ -473,6 +473,7 @@ println("main: Now I can quit."
 
 ```
 withTimeout(1300L) {
+//循环1000次
     repeat(1000) { i ->
         println("I'm sleeping $i ...")
         delay(500L)
@@ -508,6 +509,13 @@ val time = measureTimeMillis {
 }
 println("Completed in $time ms")
 ```
+
+##### 可在全局创建协程的： lauch 与 runBlocking
+ lauch 与 runBlocking都能在全局开启一个协程，但 lauch 是非阻塞的 而 runBlocking 是阻塞的
+
+##### 可返回结果的协程：withContext 与 async 
+
+withContext 与 async 都可以返回耗时任务的执行结果。 一般来说，多个 withContext 任务是串行的， 且withContext 可直接返回耗时任务的结果。 多个 async 任务是并行的，async 返回的是一个Deferred<T>，需要调用其await()方法获取结果。
 
 ### 10.语言结构
 

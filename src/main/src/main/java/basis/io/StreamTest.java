@@ -1,6 +1,7 @@
 package basis.io;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import java.io.File;
 import java.io.FileInputStream;
